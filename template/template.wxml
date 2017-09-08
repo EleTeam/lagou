@@ -1,0 +1,13 @@
+<template name='position_link'>
+  <view class='list-item'>
+    <image class='com-logo' src='../../static/images/company_logo.png'></image>
+    <view class='item-desc text-ellipsis'>
+      <text class='item-title'>熊猫书院</text>
+      <view class='item-info'>
+        <text class='item-pos text-ellipsis'>web前端工程师[深圳]</text>
+        <text class='item-salary'>10k-20k</text>
+      </view>
+      <text class='item-time'>今天 09:27</text>
+    </view>
+  </view>
+</template>

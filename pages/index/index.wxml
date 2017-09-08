@@ -1,13 +1,14 @@
 <!--index.wxml-->
+<import src='../../template/template.wxml' />
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  <view class='custom-info'>
+    <view class='info'>前端工程师/深圳/创业型</view>
+    <view class='go'>
+      <image class='edit' src='../../static/icon/edit.png'></image>
+      <text>编辑</text>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+  <!--  职位列表  -->
+  <template wx:for='{{[1,2,3,4,5,6,7,8,9]}}' is='position_link' />
+  <view class="list-more">加载更多</view>
 </view>
