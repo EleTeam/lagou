@@ -1,2 +1,15 @@
 <!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view class="search">
+  <view class="inputer">
+    <view class="l-button">
+      <text class="city">深圳</text>
+      <image class="arrow-down" src="../../static/icon/arrow_down.png"></image>
+    </view>
+    <view class="r-input">
+      <input class="input" type="text" placeholder="搜索职位或公司" />
+      <view class="icon">
+        <image class="icon-search" src="../../static/icon/search_normal.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
