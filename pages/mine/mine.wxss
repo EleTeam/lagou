@@ -1,1 +1,105 @@
 /* pages/mine/mine.wxss */
+.container {
+  margin-bottom: 45px;
+  padding: 0 15px;
+}
+
+.login-info {
+  margin: 10px 0;
+}
+
+.center {
+  text-align: center;
+  width: 125px;
+  margin: 0 auto;
+}
+
+.has-login {
+  position: relative;
+  width: 100%;
+  top: 10px;
+  height: 111px;
+}
+
+.has-login .view-resume {
+  position: absolute;
+  color: #00b38a;
+  font-size: 14px;
+  right: 0;
+}
+
+.has-login .head-pic {
+  margin: 4px 0 0 1px;
+  width: 72px;
+  height: 72px;
+  border-radius: 36px;
+}
+
+.has-login .name {
+  font-size: 14px;
+  color: #333;
+  height: 22px;
+  line-height: 22px;
+}
+
+.nologin {
+  height: 111px;
+}
+
+.nologin .loginbut {
+  font-size: 14px;
+  color: #fff;
+  display: block;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #1fc8a1;
+  position: relative;
+  top: 33px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.button {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 48%;
+  height: 86px;
+  line-height: 86px;
+  background-color: #1fc8a1;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+}
+
+.button .num {
+  margin-left: 5px;
+  width: 23px;
+  height: 23px;
+  line-height: 23px;
+  background-color: #7efffa;
+  text-align: center;
+  color: #22ac9a;
+  font-size: 13px;
+  border-radius: 50%;
+}
+
+.logout {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #1fc8a1;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
