@@ -3,7 +3,7 @@
 <view class="container">
   <view class='custom-info'>
     <view class='info'>前端工程师/深圳/创业型</view>
-    <view class='go'>
+    <view class='go' bindtap="gotoCustomInfo">
       <image class='edit' src='../../static/icon/edit.png'></image>
       <text>编辑</text>
     </view>

@@ -1,0 +1,25 @@
+/* pages/customInfo/customInfo.wxss */
+.custom-info {
+  padding: 20px;
+}
+
+.header {
+  color: #ccc;
+  font-size: 12px;
+}
+
+.desc {
+  margin: 10px 0 20px 0;
+  padding: 0 10px;
+  text-align: center;
+  height: 62.5px;
+  line-height: 62.5px;
+  color: #333;
+  font-size: 15px;
+  background-color: #f0f0f0;
+  border-radius: 2px;
+}
+
+.empty {
+  color: #00b38a;
+}
