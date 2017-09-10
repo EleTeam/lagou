@@ -1,0 +1,90 @@
+/* pages/customDetail/customDetail.wxss */
+/* 文字信息-start */
+.info {
+  position: relative;
+  height: 125px;
+  color: #00b38a;
+  font-size: 19px;
+  text-align: center;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.info-bg, .info-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.info-bg {
+  z-index: -1;
+}
+
+.info-content {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quotes {
+  position: relative;
+  width: 14px;
+  height: 11px;
+}
+
+.left-quote {
+  top: -10px;
+  left: -10px;
+}
+
+.right-quote {
+  bottom: -10px;
+  right: -10px;
+}
+/* 文字信息-end */
+
+/* 定制职位-start */
+.custom-position .inputer {
+  display: flex;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #e8e8e8;
+}
+
+.custom-position .input {
+  flex-grow: 1;
+  margin-left: 23px;
+  height: 50px;
+  font-size: 15px;
+}
+
+.custom-position .button {
+  flex-shrink: 0;
+  width: 60px;
+  border-left: 1px solid #e8e8e8;
+  text-align: center;
+  font-size: 15px;
+  color: #c2cfcc;
+}
+
+.custom-position .enable {
+  color: #00b38a;
+}
+
+/* 列表 */
+.pre-data {
+  margin-left: 15px;
+}
+
+.pre-data .item {
+  display: block;
+  padding: 0 15px 0 10px;
+  height: 44px;
+  line-height: 44px;
+  color: #666;
+  font-size: 14px;
+  border-bottom: 1px solid #e8e8e8;
+}
+/* 定制职位-end */

@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/search/search",
     "pages/mine/mine",
-    "pages/customInfo/customInfo"
+    "pages/customInfo/customInfo",
+    "pages/customDetail/customDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

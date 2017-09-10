@@ -2,28 +2,28 @@
 <view class="custom-info">
   <view class="item">
     <view class="header">职位类型</view>
-    <view class="desc text-ellipsis">
+    <view class="desc text-ellipsis" bindtap="gotoCustomDetail">
         <text>web前端工程师</text>
         <!-- <text class="empty">请选择职位类型</text> -->
     </view>
   </view>
   <view class="item">
       <view class="header">工作地点</view>
-      <view class="desc text-ellipsis">
+      <view class="desc text-ellipsis" bindtap="gotoCustomDetail">
           <text>深圳</text>
           <!-- <text class="empty">请选择工作地点</text> -->
       </view>
     </view>
     <view class="item">
         <view class="header">期望薪水</view>
-        <view class="desc text-ellipsis">
+        <view class="desc text-ellipsis" bindtap="gotoCustomDetail">
           <text>10k-20k</text>
           <!-- <text class="empty">请选择期望薪水</text> -->
         </view>
       </view>
       <view class="item">
           <view class="header">公司规模</view>
-          <view class="desc text-ellipsis">
+          <view class="desc text-ellipsis" bindtap="gotoCustomDetail">
               <text>没有要求</text>
               <!-- <text class="empty">请选择公司规模</text> -->
           </view>

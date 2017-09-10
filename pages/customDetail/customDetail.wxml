@@ -1,0 +1,21 @@
+<!--pages/customDetail/customDetail.wxml-->
+<view class="custom-detail">
+  <view class="info">
+    <image class="info-bg" src="../../static/images/back_info.jpg" />
+    <view class="info-content">
+      <image class="quotes left-quote" src="../../static/icon/left_quote.png" />
+    <text class="info-desc">想找什么职位</text>
+    <image class="quotes right-quote" src="../../static/icon/right_quote.png" />
+    </view>
+  </view>
+  <view class="custom-position">
+    <view class="inputer">
+      <input class="input" type="text" placeholder="输入你想定制的职位" />
+      <text class="button enable">OK</text>
+    </view>
+    <view class="pre-data">
+      <text wx:for="{{['产品经理','Java','运营','Android','PHP','UI','IOS','编辑','BD']}}"
+      class="item text-ellipsis">{{ item }}</text>
+    </view>
+  </view>
+</view>
