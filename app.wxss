@@ -1,4 +1,7 @@
 /**app.wxss**/
+body {
+  color: #333;
+}
 
 /**  工具样式-start  **/
 .text-ellipsis {

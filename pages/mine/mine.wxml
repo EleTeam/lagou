@@ -5,7 +5,7 @@
       <text class="loginbut">登录/注册</text>
     </view>
     <view wx:if='{{true}}' class="has-login center">
-      <text class="view-resume">简历>></text>
+      <text class="view-resume" bindtap="viewResume">简历>></text>
       <image class="head-pic" src='../../static/images/company_logo.png'></image>
       <view class="name">kurt</view>
     </view>
