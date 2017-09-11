@@ -23,7 +23,7 @@
       <text class="invitation">邀约</text>
       <text class="num">2</text>
     </view>
-    <view class="button">
+    <view class="button" bindtap="viewCollect">
       <text class="collect">收藏</text>
       <text class="num">2</text>
     </view>

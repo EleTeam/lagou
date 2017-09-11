@@ -6,7 +6,8 @@
     "pages/mine/mine",
     "pages/customInfo/customInfo",
     "pages/customDetail/customDetail",
-    "pages/resume/resume"
+    "pages/resume/resume",
+    "pages/collection/collection"
   ],
   "window": {
     "backgroundTextStyle": "light",

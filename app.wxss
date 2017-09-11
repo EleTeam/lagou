@@ -49,6 +49,7 @@ body {
 .item-salary {
   font-size: 16px;
   color: #00b38a;
+  text-align: center;
 }
 .item-time {
   font-size: 10px;
