@@ -8,7 +8,8 @@
     "pages/customDetail/customDetail",
     "pages/resume/resume",
     "pages/collection/collection",
-    "pages/deliver/deliver"
+    "pages/deliver/deliver",
+    "pages/deliverDetail/deliverDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

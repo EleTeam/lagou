@@ -1,7 +1,7 @@
 <template name='position_link'>
   <view class='list-item'>
     <image class='com-logo' src='../../static/images/company_logo.png'></image>
-    <view class='item-desc text-ellipsis'>
+    <view class='item-desc'>
       <text class='item-title'>熊猫书院</text>
       <view class='item-info'>
         <text class='item-pos text-ellipsis'>web前端工程师[深圳]</text>

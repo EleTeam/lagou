@@ -6,7 +6,7 @@
     <view class="tab-item">不合适</view>
   </view>
   <view class="content-list">
-    <view wx:if="{{true}}" class="content-item">
+    <view wx:if="{{true}}" class="content-item" bindtap="viewDeliverDetail">
       <view class="content-item-title text-ellipsis">前端开发工程师（6k-12k）</view>
       <view class="content-item-desc text-ellipsis">蛋壳创意科技 [ 深圳 ]</view>
       <view class="content-item-state">

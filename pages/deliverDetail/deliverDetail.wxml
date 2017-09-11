@@ -1,0 +1,71 @@
+<!--pages/deliverDetail/deliverDetail.wxml-->
+<import src="../../template/template.wxml" />
+<view class="deliver-detail">
+  <!-- 职位描述-start -->
+  <template is="position_link" />
+  <!-- 职位描述-end -->
+  <!-- 进度icon-start -->
+  <view class="progress">
+    <view class="title">简历投递跟踪</view>
+    <view class="pro-info">
+      <view class="line"></view>
+      <view class="pro-desc">
+        <view class="pro-item selected">
+          <view class="circle">
+            <image wx:if="{{true}}" class="check" src="../../static/icon/ok_check.png" />
+            <image wx:else class="check" src="../../static/icon/ok_uncheck.png" />
+          </view>
+          <view class="text">投递成功</view>
+        </view>
+        <view class="pro-item">
+          <view class="circle">
+            <image wx:if="{{false}}" class="check" src="../../static/icon/ok_check.png" />
+            <image wx:else class="check" src="../../static/icon/ok_uncheck.png" />
+          </view>
+          <view class="text">简历被查看</view>
+        </view>
+        <view class="pro-item">
+          <view class="circle">
+            <image wx:if="{{false}}" class="check" src="../../static/icon/ok_check.png" />
+            <image wx:else class="check" src="../../static/icon/ok_uncheck.png" />
+          </view>
+          <view class="text">待沟通</view>
+        </view>
+        <view class="pro-item">
+          <view class="circle">
+            <image wx:if="{{false}}" class="check" src="../../static/icon/ok_check.png" />
+            <image wx:else class="check" src="../../static/icon/ok_uncheck.png" />
+          </view>
+          <view class="text">邀请面试</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 进度icon-end -->
+  <!-- 操作记录-start -->
+  <view class="operations">
+    <view class="vline"></view>
+    <view class="ops-item">
+      <view class="title">
+        <view class="icon-dot"></view>
+        <view class="text">已成功接收你的简历</view>
+      </view>
+      <view class="ops-date">2017-08-31 18:02</view>
+    </view>
+    <view class="ops-item">
+      <view class="title">
+        <view class="icon-dot"></view>
+        <view class="text">已成功接收你的简历</view>
+      </view>
+      <view class="ops-date">2017-08-31 18:02</view>
+    </view>
+    <view class="ops-item">
+      <view class="title">
+        <view class="icon-dot"></view>
+        <view class="text">已成功接收你的简历</view>
+      </view>
+      <view class="ops-date">2017-08-31 18:02</view>
+    </view>
+  </view>
+  <!-- 操作记录-end -->
+</view>
