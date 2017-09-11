@@ -1,0 +1,21 @@
+<!--pages/deliver/deliver.wxml-->
+<view class="deliver">
+  <view class="tab">
+    <view class="tab-item selected">全部</view>
+    <view class="tab-item">邀请面试</view>
+    <view class="tab-item">不合适</view>
+  </view>
+  <view class="content-list">
+    <view wx:if="{{true}}" class="content-item">
+      <view class="content-item-title text-ellipsis">前端开发工程师（6k-12k）</view>
+      <view class="content-item-desc text-ellipsis">蛋壳创意科技 [ 深圳 ]</view>
+      <view class="content-item-state">
+        <text class="content-item-time">今天 14:35</text>
+        <text class="content-item-status">【 被查看 】</text>
+      </view>
+    </view>
+    <view wx:else class="content-empty">
+      <text class="text">暂无记录~</text>
+    </view>
+  </view>
+</view>

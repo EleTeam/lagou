@@ -11,7 +11,7 @@
     </view>
   </view>
   <view class='buttons'>
-    <view class="button">
+    <view class="button" bindtap="viewDeliver">
       <text class="deliver">投递</text>
       <text class="num">2</text>
     </view>

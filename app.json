@@ -7,7 +7,8 @@
     "pages/customInfo/customInfo",
     "pages/customDetail/customDetail",
     "pages/resume/resume",
-    "pages/collection/collection"
+    "pages/collection/collection",
+    "pages/deliver/deliver"
   ],
   "window": {
     "backgroundTextStyle": "light",
