@@ -10,7 +10,8 @@
     "pages/collection/collection",
     "pages/deliver/deliver",
     "pages/deliverDetail/deliverDetail",
-    "pages/positionDetail/positionDetail"
+    "pages/positionDetail/positionDetail",
+    "pages/companyDetail/companyDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

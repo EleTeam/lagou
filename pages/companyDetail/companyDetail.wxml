@@ -1,0 +1,53 @@
+<!--pages/companyDetail/companyDetail.wxml-->
+<view class="company-detail">
+  <!-- 公司简介-start -->
+  <view class="company" bindtap="viewCompanyDetail">
+    <image class="com-logo" src="../../static/images/company_logo.png" />
+    <view class="item-desc">
+      <view class="desc-l">
+        <view class="title text-ellipsis">上海提捺信息科技有限公司</view>
+        <view class="location">
+          <image class="location-icon" src="../../static/icon/location.png" />
+          <text class="text">上海</text>
+        </view>
+        <view class="info text-ellipsis">金融,移动互联网 / 不需要融资 / 500-2000人</view>
+      </view>
+      <view class="desc-r">
+        <image class="authentication" src="../../static/icon/icon_v.png" />
+      </view>
+    </view>
+  </view>
+  <!-- 公司简介-end -->
+  <!-- 职位分类-start -->
+  <view class="position-type">
+    <view class="header">职位分类</view>
+    <view class="content">
+      <view class="h-item">
+        <view class="v-item selected">技术</view>
+        <view class="v-item disabled">产品</view>
+        <view class="v-item">设计</view>
+      </view>
+      <view class="h-item">
+        <view class="v-item">运营</view>
+        <view class="v-item">市场与销售</view>
+        <view class="v-item">只能</view>
+      </view>
+      <view class="h-item">
+        <view class="v-item">金融</view>
+      </view>
+    </view>
+  </view>
+  <!-- 职位分类-end -->
+  <!-- 职位列表-start -->
+  <view class="position-list">
+    <view class="position-item">
+      <view class="item-l">
+        <view class="name text-ellipsis">web前端工程师</view>
+        <view class="time">今天 14:30</view>
+      </view>
+      <view class="item-r">20k-35k</view>
+    </view>
+    <view class="list-more">加载更多</view>
+  </view>
+  <!-- 职位列表-end -->
+</view>

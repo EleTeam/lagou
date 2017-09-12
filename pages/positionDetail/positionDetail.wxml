@@ -37,7 +37,7 @@
   </view>
   <!-- 职位详情-end -->
   <!-- 公司简介-start -->
-  <view class="company">
+  <view class="company" bindtap="viewCompanyDetail">
     <image class="com-logo" src="../../static/images/company_logo.png" />
     <view class="item-desc">
       <view class="desc-l">
