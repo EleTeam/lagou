@@ -1,5 +1,5 @@
 <template name='position_link'>
-  <view class='list-item'>
+  <view class='list-item' bindtap="viewPositionDetail">
     <image class='com-logo' src='../../static/images/company_logo.png'></image>
     <view class='item-desc'>
       <text class='item-title'>熊猫书院</text>

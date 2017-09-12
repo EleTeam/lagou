@@ -1,0 +1,136 @@
+<!--pages/positionDetail/positionDetail.wxml-->
+<view class="position-detail">
+  <view class="pos-title">
+    <view class="title text-ellipsis">web前端</view>
+    <view class="collection-icon">
+      <image wx:if="{{true}}" class="icon" src="../../static/icon/star.png" />
+      <image wx:else class="icon" src="../../static/icon/star.png" />
+      <text wx:if="{{true}}" class="text">已收藏</text>
+      <text wx:else class="text">未收藏</text>
+    </view>
+  </view>
+  <!-- 职位详情-start -->
+  <view class="detail">
+    <view class="items">
+      <view class="item text-ellipsis salary">
+        <image class="icon" src="../../static/icon/money.png" />
+        <text class="text">9k-15k</text>
+      </view>
+      <view class="item text-ellipsis work-address three-n-1">
+        <image class="icon" src="../../static/icon/location.png" />
+        <text class="text">深圳</text>
+      </view>
+      <view class="item text-ellipsis job-nature three-n">
+        <image class="icon" src="../../static/icon/time.png" />
+        <text class="text">全职</text>
+      </view>
+      <view class="item text-ellipsis work-year">
+        <image class="icon" src="../../static/icon/work.png" />
+        <text class="text">3-5年</text>
+      </view>
+      <view class="item text-ellipsis education three-n-1">
+        <image class="icon" src="../../static/icon/educational.png" />
+        <text class="text">本科及以上</text>
+      </view>
+    </view>
+    <view class="temptation">职位诱惑：五险一金,带薪年假,节日福利,做五休二</view>
+  </view>
+  <!-- 职位详情-end -->
+  <!-- 公司简介-start -->
+  <view class="company">
+    <image class="com-logo" src="../../static/images/company_logo.png" />
+    <view class="item-desc">
+      <view class="desc-l">
+        <view class="title text-ellipsis">深圳中业兴融</view>
+        <view class="info">金融,移动互联网 / 不需要融资 / 500-2000人</view>
+      </view>
+      <view class="desc-r">
+        <image class="authentication" src="../../static/icon/icon_v.png" />
+      </view>
+    </view>
+  </view>
+  <!-- 公司简介-end -->
+  <!-- 职位描述-start -->
+  <view class="position-desc">
+    <view class="header">职位描述</view>
+    <view class="content">
+        <p>岗位职责：<br/>1、负责网站前端架构的设计和开发，优化代码并保持在移动端各个平台下良好的兼容性； <br/>2、Web前端表现层及与后端交互的架构设计和开发； <br/>3、JavaScript程序模块开发，通用类库、框架编写； <br/>4、配合后台开发人员实现产品界面和功能； <br/>5、对完成的页面进行维护和对网站前端性能做相应的优化。 <br/></p>
+<p><br/></p>
+<p>职位要求：<br/>1、3年以上Web前端开发经验，要求有较高的JavaScript语言驾驭能力，能够进行面向对象/组件的前端设计和开发；</p>
+<p>2、有react、angular项目经验的优先</p>
+<p>3、要求有较强的页面制作功底（切图、DIV+CSS布局等），并有一定的页面审美意识； <br/>4、熟练HTML5、CSS/CSS3、JavaScript等前端相关技术，熟悉W3C标准； <br/>5、对pc和手机浏览器的兼容性有一定了解，并有相关问题的解决经验； <br/>6、逻辑思维清晰，前后端分离开发，单独完成前端页面的布局和逻辑交互；<br/>7、了解并可以使用前端自动化工具进行代码优化。 <br/>8、良好的代码书写风格。</p>
+    </view>
+  </view>
+  <!-- 职位描述-end -->
+  <!-- 面试评价-start -->
+  <view class="pos-eval">
+    <view class="header">面试评价（20）</view>
+    <view class="eval-list">
+      <view class="eval-list-item">
+        <view class="info-wrap">
+          <image class="portrait" src="../../static/icon/jd_portrait.png" />
+          <view class="r-content">
+            <view class="user-wrap">
+              <text class="name">匿名</text>
+              <text class="time">2016/10/18</text>
+            </view>
+            <view class="score-wrap">
+              <view class="score-item score-item-first">
+                <text class="type">综合评分</text>
+                <text class="score">2</text>
+              </view>
+              <view class="score-item">
+                <text class="type">综合评分</text>
+                <text class="score">2</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="tags-wrap">
+          <view class="tag">面试官很nice</view>
+          <view class="tag">环境高大上</view>
+        </view>
+        <view class="review-content">面试过程：笔试题都比较难，没有准备好就去简直是浪费时间，面试官的问题都问得深入，这是要招多高级的人？！！</view>
+        <view class="zan-wrap">
+          <image class="zan" src="../../static/icon/zan.png" />
+          <text class="count">有用(1)</text>
+        </view>
+      </view>
+      <view class="eval-list-item">
+        <view class="info-wrap">
+          <image class="portrait" src="../../static/icon/jd_portrait.png" />
+          <view class="r-content">
+            <view class="user-wrap">
+              <text class="name">匿名</text>
+              <text class="time">2016/10/18</text>
+            </view>
+            <view class="score-wrap">
+              <view class="score-item score-item-first">
+                <text class="type">综合评分</text>
+                <text class="score">2</text>
+              </view>
+              <view class="score-item">
+                <text class="type">综合评分</text>
+                <text class="score">2</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="tags-wrap">
+          <view class="tag">面试官很nice</view>
+          <view class="tag">环境高大上</view>
+        </view>
+        <view class="review-content">面试过程：笔试题都比较难，没有准备好就去简直是浪费时间，面试官的问题都问得深入，这是要招多高级的人？！！</view>
+        <view class="zan-wrap">
+          <image class="zan" src="../../static/icon/zan.png" />
+          <text class="count">有用(1)</text>
+        </view>
+      </view>
+    </view>
+    <view class="eval-all">查看全部20条评价</view>
+  </view>
+  <!-- 面试评价-end -->
+  <view class="fix-btn">
+    <view class="deliver-resume">投递简历</view>
+  </view>
+</view>

@@ -9,7 +9,8 @@
     "pages/resume/resume",
     "pages/collection/collection",
     "pages/deliver/deliver",
-    "pages/deliverDetail/deliverDetail"
+    "pages/deliverDetail/deliverDetail",
+    "pages/positionDetail/positionDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

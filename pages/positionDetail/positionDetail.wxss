@@ -1,0 +1,277 @@
+/* pages/positionDetail/positionDetail.wxss */
+.position-detail {
+  padding-bottom: 68px;
+}
+
+.pos-title {
+  display: flex;
+  justify-content: space-between;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 15px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.pos-title .title {
+  flex-grow: 1;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.pos-title .collection-icon {
+  flex-shrink: 0;
+  padding: 6px 10px 0 10px;
+  width: 39px;
+  height: 43px;
+  text-align: center;
+}
+
+.pos-title .icon {
+  display: block;
+  margin: 0 auto;
+  width: 15px;
+  height: 15px;
+}
+
+.pos-title .text {
+  display: block;
+  color: #888;
+  font-size: 11px;
+  line-height: 30px;
+}
+
+/* 职位详情-start */
+.detail {
+  border-bottom: 1px solid #e8e8e8;
+  min-height: 10px;
+  padding: 15px;
+}
+
+.detail .items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail .item {
+  margin-bottom: 11px;
+  flex-basis: 33.33%;
+  flex-shrink: 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.detail .three-n-1 {
+  text-align: center;
+}
+
+.detail .three-n {
+  text-align: right;
+}
+
+.detail .item .icon {
+  height: 13px;
+  width: 13px;
+}
+
+.detail .temptation {
+  color: #888;
+  font-size: 13px;
+}
+/* 职位详情-end */
+/* 公司简介-start */
+.company {
+  display: flex;
+  border-bottom: 1px solid #e8e8e8;
+  min-height: 10px;
+  padding: 15px;
+}
+
+.company .item-desc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.company .item-desc .desc-l {
+  flex-grow: 1;
+  max-width: 80%;
+}
+
+.company .item-desc .desc-l .title {
+  margin-bottom: 5px;
+  color: #00b38a;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.company .item-desc .desc-l .info {
+  color: #888;
+  font-size: 12px;
+}
+
+.company .item-desc .desc-r {
+  flex-shrink: 0;
+  margin-top: 10px;
+  width: 23px;
+  height: 29px;
+}
+
+.company .item-desc .desc-r .authentication {
+  width: 23px;
+  height: 29px;
+}
+/* 公司简介-end */
+/* 职位描述-start */
+.position-desc {
+  min-height: 10px;
+}
+
+.header {
+  height: 36px;
+  line-height: 36px;
+  padding-left: 15px;
+  color: #00b38a;
+  font-size: 14px;
+  background-color: #d2f9f0;
+}
+
+.position-desc .content {
+  word-break: break-all;
+  padding: 15px;
+  color: #555;
+  font-size: 12px;
+  line-height: 22px;
+}
+/* 职位描述-end */
+/* 面试评价-start */
+.eval-list-item {
+  padding: 15px;
+  padding-bottom: 14px;
+  border-bottom: none;
+}
+
+.info-wrap {
+  display: flex;
+}
+
+.info-wrap .portrait{
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.info-wrap .r-content{
+  flex-grow: 1;
+  padding-left: 8px;
+}
+
+.user-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-wrap .name {
+  font-size: 14px;
+  color: #333;
+}
+
+.user-wrap .time {
+  font-size: 11px;
+  color: #b2b2b2;
+}
+
+.score-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.score-item {
+  margin-left: 3.125%;
+  font-size: 11px;
+}
+.score-item-first {
+  margin-left: 0;
+}
+
+.score-item .type {
+  color: #888;
+}
+
+.score-item .score {
+  color: #ffba0d;
+}
+
+.tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 14px;
+  margin-bottom: 4px;
+}
+
+.tags-wrap .tag {
+  padding: 2px 6px;
+  margin-bottom: 10px;
+  margin-right: 1.63%;
+  font-size: 11px;
+  color: #b2b2b2;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.review-content {
+  color: #333;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: break-all;
+}
+
+.zan-wrap {
+  text-align: right;
+  margin-top: 17px;
+}
+
+.zan-wrap .zan {
+  width: 15px;
+  height: 15px;
+  margin-bottom: -2px;
+}
+
+.zan-wrap .count {
+  margin-left: 5px;
+  font-size: 13px;
+  color: #00b38a;
+}
+
+.eval-all {
+  margin-top: 12px;
+  color: #00b38a;
+  font-size: 15px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+}
+/* 面试评价-end */
+
+.fix-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  height: 44px;
+  width: 92%;
+  padding: 12px 4%;
+  line-height: 44px;
+  background-color: rgba(255, 255, 255, 0.8)
+}
+
+.deliver-resume {
+  width: 100%;
+  background-color: #00b38a;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 3px;
+}

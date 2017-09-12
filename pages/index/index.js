@@ -15,6 +15,15 @@ Page({
       url: '../customInfo/customInfo'
     })
   },
+
+  /**
+   * 查看职位详情
+   */
+  viewPositionDetail: () => {
+    wx.navigateTo({
+      url: '../positionDetail/positionDetail',
+    })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
