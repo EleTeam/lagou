@@ -1,7 +1,7 @@
 <!--pages/resume/resume.wxml-->
 <view class="resume">
   <view class="resume-header">
-    <image class="resume-header-bg" src="../../static//images/resume_head.png" />
+    <image class="resume-header-bg" src="../../static/images/resume_head.png" />
     <view class="none-work">
       <view class="resume-avatar-bg"></view>
       <image class="resume-avatar" src="../../static/images/company_logo.png" />
