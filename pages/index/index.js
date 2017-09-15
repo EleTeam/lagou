@@ -1,13 +1,11 @@
 //index.js
 //获取应用实例
+var http = require('../../utils/http.js')
 const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    positionList: []
   },
   //事件处理函数
   gotoCustomInfo: function() {
@@ -19,45 +17,19 @@ Page({
   /**
    * 查看职位详情
    */
-  viewPositionDetail: () => {
+  viewPositionDetail: (e) => {
     wx.navigateTo({
-      url: '../positionDetail/positionDetail',
+      url: `../positionDetail/positionDetail?positionId=${e.currentTarget.dataset.pid}`,
     })
   },
   onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
+    http(app.apiName.indexList).then(res => {
+      for (let item of res.data.content.data.page.result) {
+        item.companyLogo = app.picHost + item.companyLogo
       }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
+      this.setData({
+        positionList: res.data.content.data.page.result
       })
-    }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
     })
   }
 })
