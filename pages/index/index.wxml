@@ -10,5 +10,5 @@
   </view>
   <!--  职位列表  -->
   <template is='position_link' data='{{positionList}}' />
-  <view class="list-more">加载更多</view>
+  <view wx:if='{{showBtn}}' class="list-more" bindtap='loadMore'>{{ isLoading ? '正在加载...': '加载更多' }}</view>
 </view>
