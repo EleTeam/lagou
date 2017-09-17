@@ -2,12 +2,9 @@
  * @Author: guojingfeng
  * @Date: 2017-09-15 13:37:55
  * @Last Modified by: guojingfeng
- * @Last Modified time: 2017-09-15 23:22:38
+ * @Last Modified time: 2017-09-17 17:24:53
  */
 var baseUrl = 'http://guojingfeng.nat123.net/api/'
-var api = {
-  indexList: 'index/list'
-}
 
 /**
  * 对微信网络请求的简易封装
@@ -19,7 +16,7 @@ var api = {
 module.exports = function (apiName, options, callback) {
   return new Promise((resolve, reject) => {
     var config = {
-      url: baseUrl + api[apiName],
+      url: baseUrl + apiName,
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
       success: function (res) {

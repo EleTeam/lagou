@@ -1,12 +1,11 @@
 <!--pages/positionDetail/positionDetail.wxml-->
 <view class="position-detail">
   <view class="pos-title">
-    <view class="title text-ellipsis">web前端</view>
+    <view class="title text-ellipsis">{{positionName}}</view>
     <view class="collection-icon">
       <image wx:if="{{true}}" class="icon" src="../../static/icon/star.png" />
       <image wx:else class="icon" src="../../static/icon/star.png" />
-      <text wx:if="{{true}}" class="text">已收藏</text>
-      <text wx:else class="text">未收藏</text>
+      <text class="text">{{haveCollect ? '已收藏' : '未收藏'}}</text>
     </view>
   </view>
   <!-- 职位详情-start -->
@@ -14,11 +13,11 @@
     <view class="items">
       <view class="item text-ellipsis salary">
         <image class="icon" src="../../static/icon/money.png" />
-        <text class="text">9k-15k</text>
+        <text class="text">{{salary}}</text>
       </view>
       <view class="item text-ellipsis work-address three-n-1">
         <image class="icon" src="../../static/icon/location.png" />
-        <text class="text">深圳</text>
+        <text class="text">{{positionAddress}}</text>
       </view>
       <view class="item text-ellipsis job-nature three-n">
         <image class="icon" src="../../static/icon/time.png" />
@@ -33,15 +32,15 @@
         <text class="text">本科及以上</text>
       </view>
     </view>
-    <view class="temptation">职位诱惑：五险一金,带薪年假,节日福利,做五休二</view>
+    <view class="temptation">职位诱惑：{{advantage}}</view>
   </view>
   <!-- 职位详情-end -->
   <!-- 公司简介-start -->
   <view class="company" bindtap="viewCompanyDetail">
-    <image class="com-logo" src="../../static/images/company_logo.png" />
+    <image wx:if='{{companyLogo}}' class="com-logo" src="{{companyLogo}}" />
     <view class="item-desc">
       <view class="desc-l">
-        <view class="title text-ellipsis">深圳中业兴融</view>
+        <view class="title text-ellipsis">{{companyShortName}}</view>
         <view class="info">金融,移动互联网 / 不需要融资 / 500-2000人</view>
       </view>
       <view class="desc-r">
@@ -54,80 +53,53 @@
   <view class="position-desc">
     <view class="header">职位描述</view>
     <view class="content">
-        <p>岗位职责：<br/>1、负责网站前端架构的设计和开发，优化代码并保持在移动端各个平台下良好的兼容性； <br/>2、Web前端表现层及与后端交互的架构设计和开发； <br/>3、JavaScript程序模块开发，通用类库、框架编写； <br/>4、配合后台开发人员实现产品界面和功能； <br/>5、对完成的页面进行维护和对网站前端性能做相应的优化。 <br/></p>
-<p><br/></p>
-<p>职位要求：<br/>1、3年以上Web前端开发经验，要求有较高的JavaScript语言驾驭能力，能够进行面向对象/组件的前端设计和开发；</p>
-<p>2、有react、angular项目经验的优先</p>
-<p>3、要求有较强的页面制作功底（切图、DIV+CSS布局等），并有一定的页面审美意识； <br/>4、熟练HTML5、CSS/CSS3、JavaScript等前端相关技术，熟悉W3C标准； <br/>5、对pc和手机浏览器的兼容性有一定了解，并有相关问题的解决经验； <br/>6、逻辑思维清晰，前后端分离开发，单独完成前端页面的布局和逻辑交互；<br/>7、了解并可以使用前端自动化工具进行代码优化。 <br/>8、良好的代码书写风格。</p>
+      <view wx:if='{{positionDesc}}' wx:for='{{positionDesc}}'>{{item}}</view>
     </view>
   </view>
   <!-- 职位描述-end -->
   <!-- 面试评价-start -->
-  <view class="pos-eval">
-    <view class="header">面试评价（20）</view>
+  <view wx:if='{{page}}' class="pos-eval">
+    <view class="header">面试评价（{{page.totalCount}}）</view>
     <view class="eval-list">
-      <view class="eval-list-item">
+      <view wx:if='{{page.result.length > 0}}' wx:for='{{page.result}}' class="eval-list-item">
         <view class="info-wrap">
           <image class="portrait" src="../../static/icon/jd_portrait.png" />
           <view class="r-content">
             <view class="user-wrap">
-              <text class="name">匿名</text>
-              <text class="time">2016/10/18</text>
+              <text class="name">{{item.username}}</text>
+              <text class="time">{{item.createTime}}</text>
             </view>
             <view class="score-wrap">
-              <view class="score-item score-item-first">
+              <view wx:if='{{item.comprehensiveScore != 0}}' class="score-item score-item-first">
                 <text class="type">综合评分</text>
-                <text class="score">2</text>
+                <text class="score">{{item.comprehensiveScore}}</text>
               </view>
-              <view class="score-item">
-                <text class="type">综合评分</text>
-                <text class="score">2</text>
+              <view wx:if='{{item.describeScore != 0}}' class="score-item">
+                <text class="type">描述符合</text>
+                <text class="score">{{item.describeScore}}</text>
+              </view>
+              <view wx:if='{{item.interviewerScore != 0}}' class="score-item">
+                <text class="type">面试官</text>
+                <text class="score">{{item.interviewerScore}}</text>
+              </view>
+              <view wx:if='{{item.companyScore != 0}}' class="score-item">
+                <text class="type">公司环境</text>
+                <text class="score">{{item.companyScore}}</text>
               </view>
             </view>
           </view>
         </view>
-        <view class="tags-wrap">
-          <view class="tag">面试官很nice</view>
-          <view class="tag">环境高大上</view>
+        <view wx:if='{{item.tagArray.length > 0}}' class="tags-wrap">
+          <view wx:for='{{item.tagArray}}' wx:for-item='tag' class="tag">{{tag}}</view>
         </view>
-        <view class="review-content">面试过程：笔试题都比较难，没有准备好就去简直是浪费时间，面试官的问题都问得深入，这是要招多高级的人？！！</view>
+        <view class="review-content">{{item.content}}</view>
         <view class="zan-wrap">
           <image class="zan" src="../../static/icon/zan.png" />
-          <text class="count">有用(1)</text>
-        </view>
-      </view>
-      <view class="eval-list-item">
-        <view class="info-wrap">
-          <image class="portrait" src="../../static/icon/jd_portrait.png" />
-          <view class="r-content">
-            <view class="user-wrap">
-              <text class="name">匿名</text>
-              <text class="time">2016/10/18</text>
-            </view>
-            <view class="score-wrap">
-              <view class="score-item score-item-first">
-                <text class="type">综合评分</text>
-                <text class="score">2</text>
-              </view>
-              <view class="score-item">
-                <text class="type">综合评分</text>
-                <text class="score">2</text>
-              </view>
-            </view>
-          </view>
-        </view>
-        <view class="tags-wrap">
-          <view class="tag">面试官很nice</view>
-          <view class="tag">环境高大上</view>
-        </view>
-        <view class="review-content">面试过程：笔试题都比较难，没有准备好就去简直是浪费时间，面试官的问题都问得深入，这是要招多高级的人？！！</view>
-        <view class="zan-wrap">
-          <image class="zan" src="../../static/icon/zan.png" />
-          <text class="count">有用(1)</text>
+          <text class="count">有用({{item.usefulCount}})</text>
         </view>
       </view>
     </view>
-    <view class="eval-all">查看全部20条评价</view>
+    <view wx:if='{{page.hasNextPage}}' class="eval-all">查看全部{{page.totalCount}}条评价</view>
   </view>
   <!-- 面试评价-end -->
   <view class="fix-btn">
