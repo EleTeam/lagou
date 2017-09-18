@@ -12,9 +12,7 @@ Page({
    * 查看投递详情
    */
   viewDeliverDetail: () => {
-    wx.navigateTo({
-      url: '../deliverDetail/deliverDetail'
-    })
+    getApp().navTo('deliverDetail')
   },
 
   /**

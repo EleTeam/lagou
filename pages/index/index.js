@@ -12,18 +12,14 @@ Page({
   },
   //事件处理函数
   gotoCustomInfo: function () {
-    wx.navigateTo({
-      url: '../customInfo/customInfo'
-    })
+    app.navTo('customInfo')
   },
 
   /**
    * 查看职位详情
    */
   viewPositionDetail: (e) => {
-    wx.navigateTo({
-      url: `../positionDetail/positionDetail?positionId=${e.currentTarget.dataset.pid}`,
-    })
+    app.navTo('positionDetail', {positionId: e.currentTarget.dataset.pid})
   },
 
   /**

@@ -21,9 +21,7 @@ Page({
    *  跳转设置信息
    */
   gotoCustomDetail: function () {
-    wx.navigateTo({
-      url: "../customDetail/customDetail"
-    })
+    getApp().navTo('customDetail')
   },
 
   /**

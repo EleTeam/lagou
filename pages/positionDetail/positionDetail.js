@@ -25,9 +25,7 @@ Page({
    * 查看公司详细招聘信息
    */
   viewCompanyDetail: () => {
-    wx.navigateTo({
-      url: '../companyDetail/companyDetail'
-    })
+    app.navTo('companyDetail')
   },
 
   /**

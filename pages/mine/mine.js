@@ -1,4 +1,5 @@
 // pages/mine/mine.js
+let app = getApp()
 Page({
 
   /**
@@ -12,27 +13,21 @@ Page({
    * 查看简历
    */
   viewResume: function () {
-    wx.navigateTo({
-      url: '../resume/resume'
-    })
+    app.navTo('resume')
   },
 
   /**
    * 查看投递
    */
   viewDeliver: () => {
-    wx.navigateTo({
-      url: '../deliver/deliver'
-    })
+    app.navTo('deliver')
   },
 
   /**
    * 查看收藏
    */
   viewCollect: () => {
-    wx.navigateTo({
-      url: '../collection/collection'
-    })
+    app.navTo('collection')
   },
 
   /**
