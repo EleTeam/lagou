@@ -24,6 +24,13 @@ Page({
   },
 
   /**
+   * 查看面试
+   */
+  viewInterview: () => {
+    app.navTo('interview')
+  },
+
+  /**
    * 查看收藏
    */
   viewCollect: () => {

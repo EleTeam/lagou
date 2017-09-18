@@ -1,0 +1,32 @@
+<view class="interview">
+  <view class="content">
+    <view class="tabs">
+      <view class="tab selected">已面试</view>
+      <view class="tab">将面试</view>
+    </view>
+    <view class="i-list">
+      <view class="i-item">
+        <view class="i-item-title border">
+          <view class="i-item-time">12月28日  10:00</view>
+          <view class="i-item-status">
+            <text class="offer-receive-btn">确认收到Offer</text>
+          </view>
+        </view>
+        <view class="i-item-info border">
+          <view class="i-item-position text-ellipsis">HTML5 开发</view>
+          <view class="i-item-company text-ellipsis">小滴哥</view>
+          <view class="i-item-address text-ellipsis">地址： 南山科技园讯美广场1号楼6楼6105</view>
+        </view>
+        <view class="i-item-footer">
+          <view class="tel">
+            <image class="tel-icon" src='../../static/icon/tel.png'></image>
+            <view class="tel-num">13246706373</view>
+          </view>
+          <view class="add-eval">
+            <view class="stars"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

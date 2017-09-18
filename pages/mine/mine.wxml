@@ -15,7 +15,7 @@
       <text class="deliver">投递</text>
       <text class="num">2</text>
     </view>
-    <view class="button">
+    <view class="button" bindtap="viewInterview">
       <text class="interview">面试</text>
       <text class="num">2</text>
     </view>

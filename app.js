@@ -16,7 +16,8 @@ App({
       deliver: "../deliver/deliver",
       deliverDetail: "../deliverDetail/deliverDetail",
       positionDetail: "../positionDetail/positionDetail",
-      companyDetail: "../companyDetail/companyDetail"
+      companyDetail: "../companyDetail/companyDetail",
+      interview: "../interview/interview"
     }
 
     let options = {}

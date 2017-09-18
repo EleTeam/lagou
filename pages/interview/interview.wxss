@@ -1,0 +1,132 @@
+/*
+ * @Author: guojingfeng
+ * @Date: 2017-09-18 23:07:43
+ * @Last Modified by: guojingfeng
+ * @Last Modified time: 2017-09-18 23:58:04
+ */
+ page {
+   background-color: #f0f0f0;
+ }
+
+.content {
+  margin-bottom: 45px;
+}
+
+.tabs {
+  display: flex;
+  background-color: #fff;
+  height: 42.5px;
+  line-height: 42.5px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.tabs .tab {
+  flex-basis: 50%;
+  flex-shrink: 0;
+  text-align: center;
+  color: #00b38a;
+  font-size: 14px;
+  height: 100%;
+}
+
+.tabs .selected {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* 列表-start */
+.i-item {
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+.i-item .i-item-title {
+  display: flex;
+  padding: 0 14px;
+  height: 42.5px;
+  line-height: 42.5px;
+}
+
+.i-item .i-item-title view {
+  flex-basis: 50%;
+  flex-shrink: 0;
+}
+
+.i-item .i-item-time {
+  color: #333;
+  font-size: 15px;
+}
+
+.i-item .i-item-status {
+  text-align: right;
+  font-size: 14px;
+  color: #666;
+}
+
+.i-item .offer-receive-btn {
+  color: #00b38a;
+}
+
+.i-item-info {
+  padding: 0 14px;
+}
+
+.i-item-info .i-item-position {
+  margin-top: 15px;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.i-item-info .i-item-company {
+  margin-top: 11px;
+  color: #666;
+  font-size: 14px;
+}
+
+.i-item-info .i-item-address {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  color: #666;
+  font-size: 14px;
+}
+
+.i-item .border {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.i-item .i-item-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.i-item .tel {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 14px;
+  height: 42.5px;
+  line-height: 42.5px;
+}
+
+.i-item .tel-icon {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+}
+
+.i-item .tel-num {
+  flex-grow: 1;
+  color: #16cba2;
+  font-size: 14px;
+}
+
+.i-item .add-eval {
+  flex-basis: 31%;
+  flex-shrink: 0;
+  line-height: 42.5px;
+  height: 42.5px;
+  text-align: center;
+  border-left: 1px solid #e8e8e8;
+}
+/* 列表-end */
