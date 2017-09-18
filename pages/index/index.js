@@ -39,29 +39,26 @@ Page({
    * @param {Number} pageNo 自定义的页码请求
    */
   loadData(pageNo) {
+    let tempData = {
+      isLoading: true
+    } // 临时的页面数据对象，用于一次性的使用setData函数，提高性能
     var options = {}
     if (pageNo) options.data = { pageNo: pageNo }
-    this.setData({ isLoading: true })
+    this.setData(tempData)
     http(app.apiName.indexList, options).then(res => {
-      this.setData({ isLoading: false })
+      tempData.isLoading = false
+
       for (let item of res.data.content.data.page.result) {
         item.companyLogo = app.picHost + item.companyLogo
       }
-      if (parseInt(res.data.content.data.page.start) + res.data.content.data.page.pageSize < res.data.content.data.page.totalCount) {
-        this.setData({ showBtn: true })
-      } else {
-        this.setData({ showBtn: false })
-      }
-      this.setData({ pageNo: res.data.content.data.page.pageNo })
-      if (pageNo) {
-        this.setData({
-          positionList: this.data.positionList.concat(res.data.content.data.page.result)
-        })
-      } else {
-        this.setData({
-          positionList: res.data.content.data.page.result
-        })
-      }
+
+      parseInt(res.data.content.data.page.start) + res.data.content.data.page.pageSize < res.data.content.data.page.totalCount ? tempData.showBtn = true : tempData.showBtn = false
+
+      tempData.pageNo = res.data.content.data.page.pageNo
+
+      pageNo ? tempData.positionList = this.data.positionList.concat(res.data.content.data.page.result) : tempData.positionList = res.data.content.data.page.result
+
+      this.setData(tempData)
     })
   },
   onLoad: function () {

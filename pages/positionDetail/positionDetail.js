@@ -33,7 +33,6 @@ Page({
   onLoad: function (options) {
     http(app.apiName.positionDetail.replace('positionId', options.positionId)).then(res => {
       let tempData = {} // 临时的页面数据对象，用于一次性的使用setData函数，提高性能
-      console.log(res)
       tempData.positionName = res.data.content.positionName
       tempData.haveCollect = res.data.content.haveCollect
       tempData.salary = res.data.content.salary
