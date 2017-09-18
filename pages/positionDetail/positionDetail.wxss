@@ -150,6 +150,10 @@
   border-bottom: none;
 }
 
+.eval-list-item-empty {
+  font-size: 10px;
+}
+
 .info-wrap {
   display: flex;
 }

@@ -11,6 +11,9 @@ Page({
     haveCollect: '', // 是否已收藏
     salary: '', // 薪水
     positionAddress: '', // 地址
+    jobNature: '', // 职位类型
+    workYear: '', // 工作年龄
+    education: '', // 文化要求
     advantage: '', // 职位诱惑
     companyLogo: '', // 公司logo
     companyShortName: '', // 公司名称
@@ -37,11 +40,16 @@ Page({
       tempData.haveCollect = res.data.content.haveCollect
       tempData.salary = res.data.content.salary
       tempData.positionAddress = res.data.content.positionAddress
+      tempData.jobNature = res.data.content.jobNature
+      tempData.workYear = res.data.content.workYear
+      tempData.education = res.data.content.education
+
       tempData.advantage = res.data.content.advantage
+      tempData.companyShortName = res.data.content.companyShortName
 
       // 处理公司logo
       tempData.companyLogo = res.data.content.companyLogo
-      tempData.companyLogo = 'https:' + tempData.companyLogo.substring(tempData.companyLogo.indexOf("'") + 1, tempData.companyLogo.length - 1)
+      tempData.companyLogo = 'https:' + tempData.companyLogo.substring(tempData.companyLogo.indexOf("//") + 1, tempData.companyLogo.length)
 
       // 处理职位描述
       let descs = []
