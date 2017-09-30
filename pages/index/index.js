@@ -5,6 +5,7 @@ const app = getApp()
 
 Page({
   data: {
+    isLogin: app.isLogin,
     pageNo: 1,
     showBtn: false, // 默认不显示加载更多按钮
     isLoading: false, // 请求状态

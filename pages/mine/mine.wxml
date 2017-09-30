@@ -1,10 +1,10 @@
 <!--pages/mine/mine.wxml-->
 <view class="container">
   <view class="login-info">
-    <view wx:if='{{false}}' class="nologin center">
-      <text class="loginbut">登录/注册</text>
+    <view wx:if='{{!isLogin}}' class="nologin center">
+      <text class="loginbut" bindtap='gotoLogin'>登录/注册</text>
     </view>
-    <view wx:if='{{true}}' class="has-login center">
+    <view wx:if='{{isLogin}}' class="has-login center">
       <text class="view-resume" bindtap="viewResume">简历>></text>
       <image class="head-pic" src='../../static/images/company_logo.png'></image>
       <view class="name">kurt</view>

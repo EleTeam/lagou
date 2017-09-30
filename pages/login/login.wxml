@@ -1,0 +1,13 @@
+<view class="login">
+  <form bindsubmit="formSubmit">
+    <view class="section">
+      <input class="r-email top" type="text" placeholder="已验证手机/邮箱" auto-focus/>
+    </view>
+    <view class="section">
+      <input class="r-psw btm" password="true" placeholder="密码" />
+    </view>
+    <view class="btn-area">
+      <button class="btn-login" formType="submit">登录</button>
+    </view>
+  </form>
+</view>

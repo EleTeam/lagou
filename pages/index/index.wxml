@@ -2,10 +2,10 @@
 <import src='../../template/template.wxml' />
 <view class="container">
   <view class='custom-info'>
-    <view class='info'>前端工程师/深圳/创业型</view>
+    <view class='info'>10秒钟定制职位</view>
     <view class='go' bindtap="gotoCustomInfo">
-      <image class='edit' src='../../static/icon/edit.png'></image>
-      <text>编辑</text>
+      <image wx:if='{{isLogin}}' class='edit' src='../../static/icon/edit.png'></image>
+      <text>{{isLogin ? '编辑': '去登陆'}}</text>
     </view>
   </view>
   <!--  职位列表  -->

@@ -4,6 +4,7 @@ App({
   },
   globalData: {
   },
+  isLogin: false,
   navTo(routerName, qeury) {
     let routes = {
       index: "../index/index",
@@ -17,7 +18,8 @@ App({
       deliverDetail: "../deliverDetail/deliverDetail",
       positionDetail: "../positionDetail/positionDetail",
       companyDetail: "../companyDetail/companyDetail",
-      interview: "../interview/interview"
+      interview: "../interview/interview",
+      login: "../login/login"
     }
 
     let options = {}

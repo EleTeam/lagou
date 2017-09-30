@@ -11,7 +11,8 @@
     "pages/deliverDetail/deliverDetail",
     "pages/positionDetail/positionDetail",
     "pages/companyDetail/companyDetail",
-    "pages/interview/interview"
+    "pages/interview/interview",
+    "pages/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",

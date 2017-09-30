@@ -1,0 +1,51 @@
+page {
+  background: linear-gradient(135deg,#029253,#00887b);
+}
+
+.login {
+  width: 90%;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+.top {
+  border-top-left-radius: 5px!important;
+  border-top-right-radius: 5px!important;
+}
+
+.btm {
+  border-bottom-left-radius: 5px!important;
+  border-bottom-right-radius: 5px!important;
+}
+
+.login .r-email,
+.login .r-psw
+ {
+  width: 90%;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  font-family: '黑体';
+  color: #333;
+  background: #fff;
+  border-radius: 0;
+  border-radius: 0;
+  padding: 6% 5%;
+  margin: 0;
+}
+
+.login .r-email {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.login .btn-login {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  line-height: normal;
+  background: #0ac599;
+  box-shadow: 0 2px 0 #008765;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 5%;
+}

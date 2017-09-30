@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    isLogin: app.isLogin
   },
 
   /**
@@ -35,6 +35,10 @@ Page({
    */
   viewCollect: () => {
     app.navTo('collection')
+  },
+
+  gotoLogin: () => {
+    app.navTo('login')
   },
 
   /**
