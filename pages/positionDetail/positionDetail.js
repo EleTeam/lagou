@@ -54,7 +54,18 @@ Page({
       tempData.positionDesc = res.data.content.positionDesc
       tempData.positionDesc.replace(/<p>(.*)<\/p>/ig, function(){
         let args = arguments
-        if (/<br>/.test(args[1])) return // 过滤换行
+        let brRegExp = /^(<br>)/
+        let brs = args[1].match(/<br>/ig)
+        // 如果只有与一个P标签的情况，将会匹配出多个br标签
+        // 也有可能存在只有一个p标签和一个br标签的情况
+        if (brs != null) {
+          if (brRegExp.test(args[1])){
+            return // 过滤换行符
+          } else {
+            descs = args[1].split(/<br>/)
+            return
+          }
+        }
         descs.push(args[1])
       })
       tempData.positionDesc = descs
