@@ -41,7 +41,7 @@
     <view class="item-desc">
       <view class="desc-l">
         <view class="title text-ellipsis">{{companyShortName}}</view>
-        <view class="info">{{advantage}}</view>
+        <view class="info">{{companyInfo}}</view>
       </view>
       <view class="desc-r">
         <image class="authentication" src="../../static/icon/icon_v.png" />

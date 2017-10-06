@@ -10,7 +10,7 @@
           <image class="location-icon" src="../../static/icon/location.png" />
           <text class="text">{{companyAddress}}</text>
         </view>
-        <view class="info text-ellipsis">{{advantage}}</view>
+        <view class="info text-ellipsis">{{companyInfo}}</view>
       </view>
       <view class="desc-r">
         <image class="authentication" src="../../static/icon/icon_v.png" />

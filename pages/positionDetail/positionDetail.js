@@ -18,6 +18,7 @@ Page({
     companyLogo: '', // 公司logo
     companyId: '', // 公司ID
     companyShortName: '', // 公司名称
+    companyInfo: '', // 公司简介信息
     positionDesc: '', // 职位描述
     page: '', // 评价相关信息
   },
@@ -45,11 +46,12 @@ Page({
 
       tempData.advantage = res.data.content.advantage
       tempData.companyShortName = res.data.content.companyShortName
+      tempData.companyInfo = res.data.content.companyInfo
       tempData.companyId = res.data.content.companyId
 
       // 处理公司logo
       tempData.companyLogo = res.data.content.companyLogo
-      tempData.companyLogo = 'https:' + tempData.companyLogo.substring(tempData.companyLogo.indexOf("//") + 1, tempData.companyLogo.length)
+      tempData.companyLogo = 'https:' + tempData.companyLogo.substring(tempData.companyLogo.indexOf("//"), tempData.companyLogo.length)
 
       // 处理职位描述
       let descs = []

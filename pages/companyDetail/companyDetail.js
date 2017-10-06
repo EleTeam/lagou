@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    advantage: '',
+    companyInfo: '',
     companyShortName: '',
     companyId: '',
     companyLogo: '',
@@ -25,13 +25,14 @@ Page({
       console.log(res)
       let tempData = {}
       // 公司信息
-      tempData.advantage = res.data.content.advantage
+      tempData.companyInfo = res.data.content.companyInfo
       tempData.companyShortName = res.data.content.companyShortName
       tempData.companyId = res.data.content.companyId
       tempData.companyAddress = res.data.content.companyAddress
       // 处理公司logo
       tempData.companyLogo = res.data.content.companyLogo
-      tempData.companyLogo = 'https:' + tempData.companyLogo.substring(tempData.companyLogo.indexOf("//") + 1, tempData.companyLogo.length)
+      console.log(tempData.companyLogo.length)
+      tempData.companyLogo = 'https:' + tempData.companyLogo.substring(tempData.companyLogo.indexOf("//"), tempData.companyLogo.length - 1)
 
       let pageMap = JSON.parse(res.data.content.pageMap)
       tempData.dataList = []
