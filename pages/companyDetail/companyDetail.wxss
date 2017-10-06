@@ -64,12 +64,13 @@
 }
 
 .position-type .h-item {
-  margin-bottom: 5px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .position-type .v-item {
+  margin-bottom: 5px;
   flex-basis: 32%;
   flex-shrink: 0;
   text-align: center;

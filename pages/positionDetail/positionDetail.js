@@ -16,6 +16,7 @@ Page({
     education: '', // 文化要求
     advantage: '', // 职位诱惑
     companyLogo: '', // 公司logo
+    companyId: '', // 公司ID
     companyShortName: '', // 公司名称
     positionDesc: '', // 职位描述
     page: '', // 评价相关信息
@@ -24,8 +25,8 @@ Page({
   /**
    * 查看公司详细招聘信息
    */
-  viewCompanyDetail: () => {
-    app.navTo('companyDetail')
+  viewCompanyDetail: (e) => {
+    app.navTo('companyDetail', {companyId: e.currentTarget.dataset.cid})
   },
 
   /**
@@ -44,6 +45,7 @@ Page({
 
       tempData.advantage = res.data.content.advantage
       tempData.companyShortName = res.data.content.companyShortName
+      tempData.companyId = res.data.content.companyId
 
       // 处理公司logo
       tempData.companyLogo = res.data.content.companyLogo

@@ -1,66 +1,59 @@
 // pages/companyDetail/companyDetail.js
+const http = require('../../utils/http.js')
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    advantage: '',
+    companyShortName: '',
+    companyId: '',
+    companyLogo: '',
+    companyAddress: '',
+    selectedIndex: 0, // 默认选中的职位类型
+    currentData: {}, // 当前展示的列表数据
+    dataList: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
-  },
+    http(app.apiName.companyDetail.replace('companyId', options.companyId)).then(res => {
+      console.log(res)
+      let tempData = {}
+      // 公司信息
+      tempData.advantage = res.data.content.advantage
+      tempData.companyShortName = res.data.content.companyShortName
+      tempData.companyId = res.data.content.companyId
+      tempData.companyAddress = res.data.content.companyAddress
+      // 处理公司logo
+      tempData.companyLogo = res.data.content.companyLogo
+      tempData.companyLogo = 'https:' + tempData.companyLogo.substring(tempData.companyLogo.indexOf("//") + 1, tempData.companyLogo.length)
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
+      let pageMap = JSON.parse(res.data.content.pageMap)
+      tempData.dataList = []
+      tempData.selectedIndex = -1
+      let count = 0 // 索引
+      for (let [k, v] of Object.entries(pageMap)) {
+        if(tempData.selectedIndex == -1 && v.totalCount != 0) {
+          tempData.selectedIndex = count
+          tempData.currentData = {
+            key: k,
+            value: v
+          };
+          (v.totalCount < v.pageSize * v.pageNo || v.totalCount == v.pageSize * v.pageNo) ? tempData.currentData.hasMore = false : tempData.currentData.hasMore = true
+        }
+        tempData.dataList.push({
+          key: k,
+          value: v
+        })
+        count++
+      }
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+      this.setData(tempData)
+    })
   }
 })

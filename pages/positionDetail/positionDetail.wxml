@@ -36,7 +36,7 @@
   </view>
   <!-- 职位详情-end -->
   <!-- 公司简介-start -->
-  <view class="company" bindtap="viewCompanyDetail">
+  <view class="company" data-cid='{{companyId}}' bindtap="viewCompanyDetail">
     <image wx:if='{{companyLogo}}' class="com-logo" src="{{companyLogo}}" />
     <view class="item-desc">
       <view class="desc-l">
