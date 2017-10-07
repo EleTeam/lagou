@@ -17,6 +17,11 @@ Page({
     dataList: []
   },
 
+  /**
+   * 职位类型切换
+   *
+   * @param {any} e 事件
+   */
   changeType: function (e) {
     let index = e.currentTarget.dataset.index
     if (index == this.data.selectedIndex || this.data.dataList[index].value.totalCount == 0) return
@@ -25,6 +30,41 @@ Page({
     this.setData({
       currentData,
       selectedIndex: index
+    })
+  },
+
+  /**
+   * 根据职位类型加载更多的数据
+   *
+   */
+  loadMore: function (){
+    let query = {
+      data: {
+        pageNo: this.data.currentData.value.pageNo + 1,
+        companyId: this.data.companyId,
+        positionFirstType: this.data.currentData.key
+      }
+    }
+    http(app.apiName.companyDetail.replace('companyId', this.data.companyId), query).then(res => {
+      let tempData = {}
+      // 复制内容
+      tempData.currentData = this.data.currentData
+      tempData.dataList = this.data.dataList
+      // 添加新内容
+      let toObj = tempData.dataList[this.data.selectedIndex]
+      let fromObj = res.data.content.data.pageMap[tempData.currentData.key]
+      toObj.value.result = toObj.value.result.concat(fromObj.result)
+      toObj.value.pageNo = fromObj.pageNo
+      toObj.value.pageSize = fromObj.pageSize
+      toObj.value.start = fromObj.start
+      toObj.value.totalCount = fromObj.totalCount
+
+      // 设置当前列表
+      tempData.currentData = toObj
+      let v = tempData.currentData.value
+      ;(v.totalCount < v.pageSize * v.pageNo || v.totalCount == v.pageSize * v.pageNo) ? tempData.currentData.hasMore = false : tempData.currentData.hasMore = true
+
+      this.setData(tempData)
     })
   },
 

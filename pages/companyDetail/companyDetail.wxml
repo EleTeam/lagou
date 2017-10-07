@@ -37,7 +37,7 @@
       </view>
       <view class="item-r">{{item.salary}}</view>
     </view>
-    <view wx:if='{{currentData.hasMore}}' class="list-more">加载更多</view>
+    <view wx:if='{{currentData.hasMore}}' class="list-more" bindtap='loadMore'>加载更多</view>
   </view>
   <!-- 职位列表-end -->
 </view>
