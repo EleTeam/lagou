@@ -23,7 +23,7 @@
     <view class="header">职位分类</view>
     <view class="content">
       <view class="h-item">
-        <view wx:for='{{dataList}}' class="v-item {{index == selectedIndex ? 'selected': ''}} {{item.value.totalCount == 0 ? 'disabled': ''}}">{{item.key}}</view>
+        <view wx:for='{{dataList}}' class="v-item {{index == selectedIndex ? 'selected': ''}} {{item.value.totalCount == 0 ? 'disabled': ''}}" data-index='{{index}}' bindtap='changeType'>{{item.key}}</view>
       </view>
     </view>
   </view>
