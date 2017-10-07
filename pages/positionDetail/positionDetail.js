@@ -36,26 +36,26 @@ Page({
   onLoad: function (options) {
     http(app.apiName.positionDetail.replace('positionId', options.positionId)).then(res => {
       let tempData = {} // 临时的页面数据对象，用于一次性的使用setData函数，提高性能
-      tempData.positionName = res.data.content.positionName
-      tempData.haveCollect = res.data.content.haveCollect
-      tempData.salary = res.data.content.salary
-      tempData.positionAddress = res.data.content.positionAddress
-      tempData.jobNature = res.data.content.jobNature
-      tempData.workYear = res.data.content.workYear
-      tempData.education = res.data.content.education
+      tempData.positionName = res.content.positionName
+      tempData.haveCollect = res.content.haveCollect
+      tempData.salary = res.content.salary
+      tempData.positionAddress = res.content.positionAddress
+      tempData.jobNature = res.content.jobNature
+      tempData.workYear = res.content.workYear
+      tempData.education = res.content.education
 
-      tempData.advantage = res.data.content.advantage
-      tempData.companyShortName = res.data.content.companyShortName
-      tempData.companyInfo = res.data.content.companyInfo
-      tempData.companyId = res.data.content.companyId
+      tempData.advantage = res.content.advantage
+      tempData.companyShortName = res.content.companyShortName
+      tempData.companyInfo = res.content.companyInfo
+      tempData.companyId = res.content.companyId
 
       // 处理公司logo
-      tempData.companyLogo = res.data.content.companyLogo
+      tempData.companyLogo = res.content.companyLogo
       tempData.companyLogo = 'https:' + tempData.companyLogo.substring(tempData.companyLogo.indexOf("//"), tempData.companyLogo.length)
 
       // 处理职位描述
       let descs = []
-      tempData.positionDesc = res.data.content.positionDesc
+      tempData.positionDesc = res.content.positionDesc
       tempData.positionDesc.replace(/<p>(.*)<\/p>/ig, function(){
         let args = arguments
         let brRegExp = /^(<br>)/
@@ -75,7 +75,7 @@ Page({
       tempData.positionDesc = descs
 
       // 处理评价列表
-      tempData.page = JSON.parse(res.data.content.page)
+      tempData.page = JSON.parse(res.content.page)
       for (let item of tempData.page.result) {
         let time = new Date(item.createTime)
         item.createTime = `${time.getFullYear()}/${time.getMonth() + 1 > 9 ? time.getMonth() + 1 : '0' + (time.getMonth() + 1)}/${time.getDate() > 9 ? time.getDate() : '0' + time.getDate()}`

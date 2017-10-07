@@ -52,7 +52,7 @@ Page({
       tempData.dataList = this.data.dataList
       // 添加新内容
       let toObj = tempData.dataList[this.data.selectedIndex]
-      let fromObj = res.data.content.data.pageMap[tempData.currentData.key]
+      let fromObj = res.content.data.pageMap[tempData.currentData.key]
       toObj.value.result = toObj.value.result.concat(fromObj.result)
       toObj.value.pageNo = fromObj.pageNo
       toObj.value.pageSize = fromObj.pageSize
@@ -75,15 +75,15 @@ Page({
     http(app.apiName.companyDetail.replace('companyId', options.companyId)).then(res => {
       let tempData = {}
       // 公司信息
-      tempData.companyInfo = res.data.content.companyInfo
-      tempData.companyShortName = res.data.content.companyShortName
-      tempData.companyId = res.data.content.companyId
-      tempData.companyAddress = res.data.content.companyAddress
+      tempData.companyInfo = res.content.companyInfo
+      tempData.companyShortName = res.content.companyShortName
+      tempData.companyId = res.content.companyId
+      tempData.companyAddress = res.content.companyAddress
       // 处理公司logo
-      tempData.companyLogo = res.data.content.companyLogo
+      tempData.companyLogo = res.content.companyLogo
       tempData.companyLogo = 'https:' + tempData.companyLogo.substring(tempData.companyLogo.indexOf("//"), tempData.companyLogo.length - 1)
 
-      let pageMap = JSON.parse(res.data.content.pageMap)
+      let pageMap = JSON.parse(res.content.pageMap)
       tempData.dataList = []
       tempData.selectedIndex = -1
       let count = 0 // 索引

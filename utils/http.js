@@ -2,7 +2,7 @@
  * @Author: guojingfeng
  * @Date: 2017-09-15 13:37:55
  * @Last Modified by: guojingfeng
- * @Last Modified time: 2017-09-17 17:24:53
+ * @Last Modified time: 2017-10-08 00:33:25
  */
 var baseUrl = 'http://guojingfeng.nat123.net/api/'
 
@@ -21,7 +21,7 @@ module.exports = function (apiName, options, callback) {
       // header: {}, // 设置请求的 header
       success: function (res) {
         // success
-        resolve(res)
+        resolve(res.data)
       },
       fail: function () {
         // fail

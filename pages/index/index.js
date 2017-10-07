@@ -45,15 +45,15 @@ Page({
     http(app.apiName.indexList, options).then(res => {
       tempData.isLoading = false
 
-      for (let item of res.data.content.data.page.result) {
+      for (let item of res.content.data.page.result) {
         item.companyLogo = app.picHost + item.companyLogo
       }
 
-      parseInt(res.data.content.data.page.start) + res.data.content.data.page.pageSize < res.data.content.data.page.totalCount ? tempData.showBtn = true : tempData.showBtn = false
+      parseInt(res.content.data.page.start) + res.content.data.page.pageSize < res.content.data.page.totalCount ? tempData.showBtn = true : tempData.showBtn = false
 
-      tempData.pageNo = res.data.content.data.page.pageNo
+      tempData.pageNo = res.content.data.page.pageNo
 
-      pageNo ? tempData.positionList = this.data.positionList.concat(res.data.content.data.page.result) : tempData.positionList = res.data.content.data.page.result
+      pageNo ? tempData.positionList = this.data.positionList.concat(res.content.data.page.result) : tempData.positionList = res.content.data.page.result
 
       this.setData(tempData)
     })
