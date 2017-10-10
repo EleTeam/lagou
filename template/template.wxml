@@ -1,3 +1,4 @@
+<!-- 职位列表模板 -->
 <template name='position_link'>
   <view wx:for='{{positionList}}' wx:key='item.positionId' class='list-item' data-pid='{{item.positionId}}' bindtap="viewPositionDetail">
     <image class='com-logo' src='{{item.companyLogo}}'></image>
@@ -10,4 +11,15 @@
       <text class='item-time'>{{item.createTime}}</text>
     </view>
   </view>
+</template>
+<!-- 城市列表模板 -->
+<template name='cityList'>
+  <block wx:if='{{cities.length > 0}}' wx:for='{{cities}}' wx:for-index="index" wx:for-item="item">
+    <view class="cities-header">{{item.nameStr}}</view>
+    <view class="cities-list">
+      <view wx:for='{{item.cityGroup}}' wx:for-index="idx" wx:for-item="cities" class="cities-list-item">
+        <view wx:for='{{cities}}' wx:for-index="i" wx:for-item="cityName" class="activeable cities-item {{city == cityName ? 'cities-item-selected' : ''}}" data-city-name="{{cityName}}" bindtap='selectCity'>{{cityName}}</view>
+      </view>
+    </view>
+  </block>
 </template>

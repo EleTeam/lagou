@@ -56,3 +56,33 @@ body {
   color: #888;
 }
 /**  职位列表公共样式-end  **/
+
+/* 城市列表样式-start */
+.cities-header {
+  border-bottom: 1px solid #e8e8e8;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 15px;
+  font-size: 12px;
+  color: #888;
+}
+.cities-list {
+  width: 100%;
+  border-bottom: 1px solid #e8e8e8;
+}
+.cities-list-item {
+  display: flex;
+}
+.cities-item {
+  flex-grow: 1;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 15px;
+  color: #333;
+  min-width: 100px;
+}
+.cities-item-selected {
+  background-color: #e7f3f0;
+}
+/* 城市列表样式-end */

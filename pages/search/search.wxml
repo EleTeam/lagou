@@ -1,8 +1,9 @@
 <!--pages/search/search.wxml-->
+<import src='../../template/template.wxml'/>
 <view class="search">
   <view class="inputer">
-    <view class="l-button">
-      <text class="city">深圳</text>
+    <view class="l-button" bindtap='changeCity'>
+      <text class="city">{{city}}</text>
       <image class="arrow-down" src="../../static/icon/arrow_down.png"></image>
     </view>
     <view class="r-input">
@@ -11,5 +12,8 @@
         <image class="icon-search" src="../../static/icon/search_normal.png"></image>
       </view>
     </view>
+  </view>
+  <view class="cities-wrap {{showCity ? 'cities-wrap-active': ''}}">
+    <template is='cityList' data='{{cities, city}}'></template>
   </view>
 </view>
