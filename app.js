@@ -49,6 +49,7 @@ App({
     indexList: 'index/list', // 首页列表
     positionDetail: 'position/positionId', // 职位详情
     companyDetail: 'company/companyId', // 公司招聘信息
-    cities: 'cities', // 地址
+    cities: 'cities', // 城市列表
+    search: 'search', // 搜索职位
   }
 })

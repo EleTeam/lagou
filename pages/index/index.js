@@ -28,6 +28,7 @@ Page({
    *
    */
   loadMore() {
+    if(this.data.isLoading) return
     this.loadData(this.data.pageNo + 1)
   },
   /**

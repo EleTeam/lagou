@@ -7,11 +7,15 @@
       <image class="arrow-down" src="../../static/icon/arrow_down.png"></image>
     </view>
     <view class="r-input">
-      <input class="input" type="text" placeholder="搜索职位或公司" />
-      <view class="icon">
+      <input class="input" type="text" placeholder="搜索职位或公司" bindconfirm='confirmSearch'/>
+      <view class="icon" bindtap='iconSearch'>
         <image class="icon-search" src="../../static/icon/search_normal.png"></image>
       </view>
     </view>
+  </view>
+  <view class="search-result-wrap">
+    <template is='position_link' data='{{positionList}}'></template>
+    <view wx:if='{{page.pageNo && !(page.pageNo * page.pageSize > page.totalCount)}}' class="list-more" bindtap='loadMore'>{{ isLoading ? '正在加载...': '加载更多' }}</view>
   </view>
   <view class="cities-wrap {{showCity ? 'cities-wrap-active': ''}}">
     <template is='cityList' data='{{cities, city}}'></template>

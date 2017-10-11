@@ -7,9 +7,83 @@ Page({
    * 页面的初始数据
    */
   data: {
+    keyword: '',
+    page: {},
+    positionList: [],
+    isLoading: false, // 请求状态
     showCity: false,
     city: '全国',
     cities: []
+  },
+
+  /**
+   * 点击键盘enter键或者完成的事件
+   *
+   * @param {any} e
+   */
+  confirmSearch(e) {
+    this.search(e.detail)
+  },
+
+  /**
+   * 点击搜索图标的事件
+   *
+   */
+  iconSearch() {
+    var self = this
+    wx.createSelectorQuery().select('.input').fields({ properties: ['value'] }, function (args) {
+      self.search(args)
+    }).exec()
+  },
+
+  /**
+   * 搜索功能
+   *
+   * @param {any} e
+   */
+  search(e) {
+    if(!e.value) return
+    this.data.keyword = e.value
+    let data = {
+      city: this.data.city,
+      positionName: this.data.keyword
+    }
+    http(app.apiName.search, { data }).then(res => {
+      let tempData = {}
+      tempData.page = res.content.data.page
+      res.content.data.page.result.forEach(function(item) {
+        item.companyLogo = app.picHost + item.companyLogo
+      });
+      tempData.positionList = tempData.page.result
+      this.setData(tempData)
+    })
+  },
+
+  /**
+   * 加载更多搜索结果
+   *
+   */
+  loadMore(){
+    if(this.data.isLoading) return
+    let tempData = {
+      isLoading: true
+    }
+    let data = {
+      city: this.data.city,
+      positionName: this.data.keyword,
+      pageNo: this.data.page.pageNo + 1
+    }
+    this.setData(tempData)
+    http(app.apiName.search, { data }).then(res => {
+      tempData.isLoading = false
+      res.content.data.page.result.forEach(function(item) {
+        item.companyLogo = app.picHost + item.companyLogo
+      });
+      res.content.data.page.result = this.data.positionList.concat(res.content.data.page.result)
+      tempData.page = res.content.data.page
+      tempData.positionList = tempData.page.result
+      this.setData(tempData)
+    })
   },
 
   /**
@@ -31,7 +105,7 @@ Page({
     let tempData = {}
     tempData.city = e.currentTarget.dataset.cityName
     tempData.showCity = false
-    if(!tempData.city) return
+    if (!tempData.city) return
     this.setData(tempData)
   },
 
