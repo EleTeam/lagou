@@ -13,20 +13,20 @@
   <view class='buttons'>
     <view class="button" bindtap="viewDeliver">
       <text class="deliver">投递</text>
-      <text class="num">2</text>
+      <text wx:if='{{deliverCnt > 0}}' class="num">2</text>
     </view>
     <view class="button" bindtap="viewInterview">
       <text class="interview">面试</text>
-      <text class="num">2</text>
+      <text wx:if='{{interviewCnt > 0}}' class="num">2</text>
     </view>
     <view class="button">
       <text class="invitation">邀约</text>
-      <text class="num">2</text>
+      <text wx:if='{{invitationCnt > 0}}' class="num">2</text>
     </view>
     <view class="button" bindtap="viewCollect">
       <text class="collect">收藏</text>
-      <text class="num">2</text>
+      <text wx:if='{{collectCnt > 0}}' class="num">2</text>
     </view>
   </view>
-  <text class="logout">退出登录</text>
+  <text wx:if='{{isLogin}}' class="logout">退出登录</text>
 </view>
