@@ -1,5 +1,5 @@
 <!--pages/companyDetail/companyDetail.wxml-->
-<view class="company-detail">
+<view hidden='{{dataList.length ==0 && isLoading}}' class="company-detail">
   <!-- 公司简介-start -->
   <view class="company" bindtap="viewCompanyDetail">
     <image wx:if='{{!!companyLogo}}' class="com-logo" src="{{companyLogo}}" />
@@ -37,7 +37,7 @@
       </view>
       <view class="item-r">{{item.salary}}</view>
     </view>
-    <view wx:if='{{currentData.hasMore}}' class="list-more" bindtap='loadMore'>加载更多</view>
+    <view wx:if='{{currentData.hasMore}}' class="list-more" bindtap='loadMore'>{{ isLoading ? '正在加载...': '加载更多' }}</view>
   </view>
   <!-- 职位列表-end -->
 </view>

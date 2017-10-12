@@ -2,11 +2,11 @@
 var http = require('../../utils/http')
 var app = getApp()
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
+    isLoading: false, // 请求状态
     positionName: '', // 职位名称
     haveCollect: '', // 是否已收藏
     salary: '', // 薪水
@@ -27,15 +27,22 @@ Page({
    * 查看公司详细招聘信息
    */
   viewCompanyDetail: (e) => {
-    app.navTo('companyDetail', {companyId: e.currentTarget.dataset.cid})
+    app.navTo('companyDetail', { companyId: e.currentTarget.dataset.cid })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let tempData = {
+      isLoading: true
+    } // 临时的页面数据对象，用于一次性的使用setData函数，提高性能
+    wx.showLoading({ title: '数据加载中...' })
+    this.setData(tempData)
     http(app.apiName.positionDetail.replace('positionId', options.positionId)).then(res => {
-      let tempData = {} // 临时的页面数据对象，用于一次性的使用setData函数，提高性能
+      tempData.isLoading = false
+      wx.hideToast()
+
       tempData.positionName = res.content.positionName
       tempData.haveCollect = res.content.haveCollect
       tempData.salary = res.content.salary
@@ -56,14 +63,14 @@ Page({
       // 处理职位描述
       let descs = []
       tempData.positionDesc = res.content.positionDesc
-      tempData.positionDesc.replace(/<p>(.*)<\/p>/ig, function(){
+      tempData.positionDesc.replace(/<p>(.*)<\/p>/ig, function () {
         let args = arguments
         let brRegExp = /^(<br>)/
         let brs = args[1].match(/<br>/ig)
         // 如果只有与一个P标签的情况，将会匹配出多个br标签
         // 也有可能存在只有一个p标签和一个br标签的情况
         if (brs != null) {
-          if (brRegExp.test(args[1])){
+          if (brRegExp.test(args[1])) {
             return // 过滤换行符
           } else {
             descs = args[1].split(/<br>/)

@@ -1,5 +1,5 @@
 <!--pages/positionDetail/positionDetail.wxml-->
-<view class="position-detail">
+<view hidden='{{isLoading}}' class="position-detail">
   <view class="pos-title">
     <view class="title text-ellipsis">{{positionName}}</view>
     <view class="collection-icon">

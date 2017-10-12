@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    isLoading: false, // 请求状态
     companyInfo: '',
     companyShortName: '',
     companyId: '',
@@ -45,8 +46,12 @@ Page({
         positionFirstType: this.data.currentData.key
       }
     }
+    let tempData = {
+      isLoading: true
+    }
+    this.setData(tempData)
     http(app.apiName.companyDetail.replace('companyId', this.data.companyId), query).then(res => {
-      let tempData = {}
+      tempData.isLoading = false
       // 复制内容
       tempData.currentData = this.data.currentData
       tempData.dataList = this.data.dataList
@@ -72,8 +77,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let tempData = {
+      isLoading: true
+    }
+    wx.showLoading({ title: '数据加载中...' })
+    this.setData(tempData)
     http(app.apiName.companyDetail.replace('companyId', options.companyId)).then(res => {
-      let tempData = {}
+      tempData.isLoading = false
+      wx.hideToast()
+
       // 公司信息
       tempData.companyInfo = res.content.companyInfo
       tempData.companyShortName = res.content.companyShortName
