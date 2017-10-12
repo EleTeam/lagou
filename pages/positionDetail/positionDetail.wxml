@@ -1,5 +1,7 @@
 <!--pages/positionDetail/positionDetail.wxml-->
+<import src='../../template/template.wxml' />
 <view hidden='{{isLoading}}' class="position-detail">
+  <template is='header' data='{{header}}'></template>
   <view class="pos-title">
     <view class="title text-ellipsis">{{positionName}}</view>
     <view class="collection-icon">

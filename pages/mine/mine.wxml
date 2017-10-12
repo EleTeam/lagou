@@ -1,4 +1,6 @@
 <!--pages/mine/mine.wxml-->
+<import src='../../template/template.wxml' />
+<template is='header' data='{{header}}'></template>
 <view class="container">
   <view class="login-info">
     <view wx:if='{{!isLogin}}' class="nologin center">

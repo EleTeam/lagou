@@ -26,7 +26,7 @@
 </template>
 <!-- 头部 -->
 <template name='header'>
-  <view class="header">
+  <view class="common-header">
     {{header.title}}
     <view wx:if='{{header.leftIcon}}' class="left" bindtap='goBack'>
       <view class="corner icon2"></view>

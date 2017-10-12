@@ -7,6 +7,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+    header: {
+      title: '拉勾网',
+      leftIcon: false,
+      rightIcon: false
+     },
     keyword: '',
     page: {},
     positionList: [],

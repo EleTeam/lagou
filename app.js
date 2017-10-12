@@ -24,6 +24,12 @@ App({
 
     let options = {}
 
+    // tab页面只能用wx.switchTab()进行跳转
+    if ('index' == routerName || 'search' == routerName || 'mine' == routerName) {
+      options.url = routes[routerName]
+      wx.switchTab(options)
+    }
+
     if (routes[routerName]) {
       options.url = routes[routerName]
     } else {

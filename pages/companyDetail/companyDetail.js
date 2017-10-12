@@ -7,6 +7,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+    header: {
+      title: '职位详情',
+      leftIcon: true,
+      rightIcon: true
+    },
     isLoading: false, // 请求状态
     companyInfo: '',
     companyShortName: '',
@@ -16,6 +21,14 @@ Page({
     selectedIndex: 0, // 默认选中的职位类型
     currentData: {}, // 当前展示的列表数据
     dataList: []
+  },
+
+  goBack() {
+    wx.navigateBack()
+  },
+
+  goHome() {
+    app.navTo('index')
   },
 
   /**

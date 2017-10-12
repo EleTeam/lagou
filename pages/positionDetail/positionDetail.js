@@ -6,6 +6,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+    header: {
+      title: '职位详情',
+      leftIcon: true,
+      rightIcon: true
+    },
     isLoading: false, // 请求状态
     positionName: '', // 职位名称
     haveCollect: '', // 是否已收藏
@@ -21,6 +26,14 @@ Page({
     companyInfo: '', // 公司简介信息
     positionDesc: '', // 职位描述
     page: '', // 评价相关信息
+  },
+
+  goBack() {
+    wx.navigateBack()
+  },
+
+  goHome() {
+    app.navTo('index')
   },
 
   /**

@@ -1,13 +1,14 @@
 <!--pages/search/search.wxml-->
-<import src='../../template/template.wxml'/>
+<import src='../../template/template.wxml' />
 <view class="search">
+  <template is='header' data='{{header}}'></template>
   <view class="inputer">
     <view class="l-button" bindtap='changeCity'>
       <text class="city">{{city}}</text>
       <image class="arrow-down" src="../../static/icon/arrow_down.png"></image>
     </view>
     <view class="r-input">
-      <input class="input" type="text" placeholder="搜索职位或公司" bindconfirm='confirmSearch'/>
+      <input class="input" type="text" placeholder="搜索职位或公司" bindconfirm='confirmSearch' />
       <view class="icon" bindtap='iconSearch'>
         <image class="icon-search" src="../../static/icon/search_normal.png"></image>
       </view>
