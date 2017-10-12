@@ -12,6 +12,54 @@ body {
 }
 /**  工具样式-end  **/
 
+/* 公共头部-start */
+.header {
+  height: 45px;
+  line-height: 45px;
+  background-color: #00b38a;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+}
+
+.header .left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 40px;
+}
+
+.header .left .corner,
+.header .right .corner
+{
+  margin: 13px auto 0 auto;
+  background-size: 250px 250px;
+  display: inline-block;
+}
+
+.header .left .corner {
+  width: 9px;
+  height: 20px;
+  background-position: -1.5px -20.5px;
+}
+
+.header .right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 40px;
+}
+
+.header .right .corner {
+  width: 17px;
+  height: 20px;
+  background-position: -60px -46.5px;
+}
+/* 公共头部-end */
+
 /**  职位列表公共样式-start  **/
 .list-item {
   display: flex;
@@ -86,3 +134,7 @@ body {
   background-color: #e7f3f0;
 }
 /* 城市列表样式-end */
+.icon2 {
+  background-image: url('https://raw.githubusercontent.com/guojingfeng1994/lagou/master/static/icon/icon2.png');
+  background-repeat: no-repeat;
+}

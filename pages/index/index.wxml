@@ -1,6 +1,7 @@
 <!--index.wxml-->
 <import src='../../template/template.wxml' />
 <view class="container">
+  <template is='header' data='{{header}}'></template>
   <view class='custom-info'>
     <view class='info'>10秒钟定制职位</view>
     <view class='go' bindtap="gotoCustomInfo">

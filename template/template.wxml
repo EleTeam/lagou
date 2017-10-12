@@ -18,8 +18,21 @@
     <view class="cities-header">{{item.nameStr}}</view>
     <view class="cities-list">
       <view wx:for='{{item.cityGroup}}' wx:for-index="idx" wx:for-item="cities" class="cities-list-item">
-        <view wx:for='{{cities}}' wx:for-index="i" wx:for-item="cityName" class="activeable cities-item {{city == cityName ? 'cities-item-selected' : ''}}" data-city-name="{{cityName}}" bindtap='selectCity'>{{cityName}}</view>
+        <view wx:for='{{cities}}' wx:for-index="i" wx:for-item="cityName" class="activeable cities-item {{city == cityName ? 'cities-item-selected' : ''}}"
+          data-city-name="{{cityName}}" bindtap='selectCity'>{{cityName}}</view>
       </view>
     </view>
   </block>
+</template>
+<!-- 头部 -->
+<template name='header'>
+  <view class="header">
+    {{header.title}}
+    <view wx:if='{{header.leftIcon}}' class="left" bindtap='goBack'>
+      <view class="corner icon2"></view>
+    </view>
+    <view wx:if='{{header.rightIcon}}' class="right" bindtap='goHome'>
+      <view class="corner icon2"></view>
+    </view>
+  </view>
 </template>

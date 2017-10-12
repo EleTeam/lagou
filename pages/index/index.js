@@ -5,6 +5,11 @@ const app = getApp()
 
 Page({
   data: {
+    header: {
+     title: '拉勾网',
+     leftIcon: false,
+     rightIcon: false
+    },
     isLogin: app.isLogin,
     pageNo: 1,
     showBtn: false, // 默认不显示加载更多按钮
