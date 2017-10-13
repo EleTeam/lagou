@@ -2,9 +2,9 @@
  * @Author: guojingfeng
  * @Date: 2017-09-15 13:37:55
  * @Last Modified by: guojingfeng
- * @Last Modified time: 2017-10-08 00:33:25
+ * @Last Modified time: 2017-10-13 13:30:18
  */
-var baseUrl = 'http://guojingfeng.nat123.net/api/'
+var baseUrl = 'http://localhost:3000/api/'
 
 /**
  * 对微信网络请求的简易封装
