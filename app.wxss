@@ -35,7 +35,6 @@ body {
 .common-header .right .corner
 {
   margin: 13px auto 0 auto;
-  background-size: 250px 250px;
   display: inline-block;
 }
 
@@ -134,7 +133,14 @@ body {
   background-color: #e7f3f0;
 }
 /* 城市列表样式-end */
+
+/* 图标 */
+.icon {
+  background: url('https://raw.githubusercontent.com/guojingfeng1994/lagou/master/static/icon/icon.png') no-repeat;
+  background-size: 250px 250px;
+}
+
 .icon2 {
-  background-image: url('https://raw.githubusercontent.com/guojingfeng1994/lagou/master/static/icon/icon2.png');
-  background-repeat: no-repeat;
+  background: url('https://raw.githubusercontent.com/guojingfeng1994/lagou/master/static/icon/icon2.png') no-repeat;
+  background-size: 250px 250px;
 }

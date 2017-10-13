@@ -30,8 +30,10 @@
 }
 
 .company .location-icon {
-  width: 12px;
+  display: inline-block;
+  width: 9px;
   height: 12px;
+  background-position: -93px -22.5px;
 }
 
 .company .item-desc .desc-l .info {
@@ -49,6 +51,7 @@
 .company .item-desc .desc-r .authentication {
   width: 23px;
   height: 29px;
+  background-position: -222.5px -3.5px;
 }
 /* 公司简介-end */
 /* 职位分类-start */

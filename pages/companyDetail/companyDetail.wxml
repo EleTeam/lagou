@@ -9,13 +9,13 @@
       <view class="desc-l">
         <view class="title text-ellipsis">{{companyShortName}}</view>
         <view class="location">
-          <image class="location-icon" src="../../static/icon/location.png" />
+          <view class="icon location-icon"></view>
           <text class="text">{{companyAddress}}</text>
         </view>
         <view class="info text-ellipsis">{{companyInfo}}</view>
       </view>
       <view class="desc-r">
-        <image class="authentication" src="../../static/icon/icon_v.png" />
+        <view class="icon authentication"></view>
       </view>
     </view>
   </view>

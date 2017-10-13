@@ -28,10 +28,17 @@
 }
 
 .pos-title .icon {
-  display: block;
   margin: 0 auto;
   width: 15px;
   height: 15px;
+}
+
+.pos-title .uncollect {
+  background-position: -170px -41px;
+}
+
+.pos-title .collected {
+  background-position: -150px -41px;
 }
 
 .pos-title .text {
@@ -70,8 +77,29 @@
 }
 
 .detail .item .icon {
+  display: inline-block;
   height: 13px;
   width: 13px;
+}
+
+.detail .salary .icon {
+  background-position: -66px -48px;
+}
+
+.detail .work-address .icon {
+  background-position: -79px -49px;
+}
+
+.detail .job-nature .icon {
+  background-position: -93px -49px;
+}
+
+.detail .work-year .icon {
+  background-position: -110.5px -49.5px;
+}
+
+.detail .education .icon {
+  background-position: -127.5px -49px;
 }
 
 .detail .temptation {
@@ -119,6 +147,7 @@
 .company .item-desc .desc-r .authentication {
   width: 23px;
   height: 29px;
+  background-position: -222.5px -3.5px;
 }
 /* 公司简介-end */
 /* 职位描述-start */
@@ -236,9 +265,11 @@
 }
 
 .zan-wrap .zan {
-  width: 15px;
+  display: inline-block;
+  width: 15.5px;
   height: 15px;
   margin-bottom: -2px;
+  background-position: -43.5px -218px;
 }
 
 .zan-wrap .count {

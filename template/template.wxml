@@ -3,7 +3,7 @@
   <view wx:for='{{positionList}}' wx:key='item.positionId' class='list-item' data-pid='{{item.positionId}}' bindtap="viewPositionDetail">
     <image class='com-logo' src='{{item.companyLogo}}'></image>
     <view class='item-desc'>
-      <text class='item-title'>{{item.companyFullName}}</text>
+      <text class='item-title text-ellipsis'>{{item.companyFullName}}</text>
       <view class='item-info'>
         <text class='item-pos text-ellipsis'>{{item.city}}</text>
         <text class='item-salary'>{{item.salary}}</text>

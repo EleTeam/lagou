@@ -16,9 +16,11 @@
 }
 
 .arrow-down {
+  display: inline-block;
   margin-left: 2px;
-  width: 10px;
-  height: 10px;
+  width: 8.5px;
+  height: 7px;
+  background-position: -1px -2.5px;
 }
 
 .r-input {
@@ -38,7 +40,7 @@
   font-size: 15px;
 }
 
-.icon {
+.icon-wrap {
   position:absolute;
   z-index:10;
   top:0;
@@ -55,6 +57,7 @@
 .icon-search {
   width: 17px;
   height: 17px;
+  background-position: -14px -2.5px;
 }
 
 .list-more {

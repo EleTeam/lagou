@@ -41,6 +41,13 @@ Page({
     }).exec()
   },
 
+   /**
+   * 查看职位详情
+   */
+  viewPositionDetail: (e) => {
+    app.navTo('positionDetail', {positionId: e.currentTarget.dataset.pid})
+  },
+
   /**
    * 搜索功能
    *

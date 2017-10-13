@@ -5,7 +5,7 @@
   <view class='custom-info'>
     <view class='info'>10秒钟定制职位</view>
     <view class='go' bindtap="gotoCustomInfo">
-      <image wx:if='{{isLogin}}' class='edit' src='../../static/icon/edit.png'></image>
+      <view wx:if='{{isLogin}}' class="icon2 edit"></view>
       <text>{{isLogin ? '编辑': '去登陆'}}</text>
     </view>
   </view>

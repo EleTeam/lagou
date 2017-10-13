@@ -13,7 +13,6 @@
 
 .go {
   display: flex;
-  align-items: center;
   margin-top: 6px;
   padding: 0 20px;
   height: 30px;
@@ -26,7 +25,8 @@
 .edit {
   margin-right: 2px;
   width: 10px;
-  height: 10px;
+  height: 20px;
+  background-position: -88px 7px;
 }
 /**  顶部-end  **/
 .list-more {
