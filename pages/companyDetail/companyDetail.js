@@ -32,6 +32,15 @@ Page({
   },
 
   /**
+   * 查看职位详情
+   */
+  viewPositionDetail: (e) => {
+    wx.redirectTo({
+      url: '../positionDetail/positionDetail?positionId=' + e.currentTarget.dataset.pid
+    })
+  },
+
+  /**
    * 职位类型切换
    *
    * @param {any} e 事件

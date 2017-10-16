@@ -3,7 +3,7 @@
 <view hidden='{{dataList.length ==0 && isLoading}}' class="company-detail">
   <template is='header' data='{{header}}'></template>
   <!-- 公司简介-start -->
-  <view class="company" bindtap="viewCompanyDetail">
+  <view class="company">
     <image wx:if='{{!!companyLogo}}' class="com-logo" src="{{companyLogo}}" />
     <view class="item-desc">
       <view class="desc-l">
@@ -33,7 +33,7 @@
   <!-- 职位分类-end -->
   <!-- 职位列表-start -->
   <view wx:if='currentData.key' class="position-list">
-    <view wx:for='{{currentData.value.result}}' data-pid='{{item.positionId}}' class="position-item">
+    <view wx:for='{{currentData.value.result}}' data-pid='{{item.positionId}}' class="position-item" bindtap='viewPositionDetail'>
       <view class="item-l">
         <view class="name text-ellipsis">{{item.positionName}}</view>
         <view class="time">{{item.createTime}}</view>
